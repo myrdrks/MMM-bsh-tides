@@ -1,0 +1,19 @@
+{
+  "name": "MMM-bsh-tides",
+  "version": "1.0.0",
+  "description": "MagicMirror module that displays german tides from Bundesamt für Seeschifffahrt und Hydrographie",
+  "author": "Philip Meyerdierks <philip@myrdrks.de>",
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/myrdrks/MMM-bsh-tides",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myrdrks/MMM-bsh-tides.git"
+  },
+  "bugs": {
+    "url": "https://github.com/myrdrks/MMM-bsh-tides/issues"
+  },
+  "main": "MMM-bsh-tides.js",
+  "dependencies": {
+    "feather-icons": "^4.24.1"
+  }
+}

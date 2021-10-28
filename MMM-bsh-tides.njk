@@ -1,0 +1,32 @@
+<div class="main">
+{% if not today or not tomorrow %}
+  <span class="loading">Adjusting the tides..</span>
+{% endif %}
+
+{% if today %}
+  <span class="title">{{ config.todayLabel }}</span>
+  <table class="tideTable" border="0">
+  {% for item in today %}
+    <tr>
+      <td class="tide">{{ item.tide }}</td>
+      {% if config.showIcons %}<td class="tideIcon">{{ htIcon | safe if item.tide == config.highTide else ltIcon | safe }}</td>{% endif %}
+      <td class="time">{{ item.time }}</td>
+    </tr>
+  {% endfor %}
+  </table>
+{% endif %}
+
+{% if tomorrow %}
+  <span class="title">{{ config.tomorrowLabel }}</span>
+  <table class="tideTable" border="0">
+  {% for item in tomorrow %}
+    <tr>
+      <td class="tide">{{ item.tide }}</td>
+      {% if config.showIcons %}<td class="tideIcon">{{ htIcon | safe if item.tide == config.highTide else ltIcon | safe }}</td>{% endif %}
+      <td class="time">{{ item.time }}</td>
+    </tr>
+  {% endfor %}
+  </table>
+{% endif %}
+
+</div>
