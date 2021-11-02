@@ -27,11 +27,12 @@ module.exports = NodeHelper.create({
       const tide = l[e[3]];
       const timestr = `${moment(e[5] && e[5].replace(/ /g, '0'), 'DD.MM.YYYY').format('YYYY-MM-DD')} ${e[6]} ${e[10].replace(/ /g, 0)}`;
       const datetime = moment(timestr, "YYYY-MM-DD HH:mm Z");
+      const time = datetime.format('HH:mm');
       
       return ({
         tide,
         datetime,
-        timestr,
+        time,
       })
     });
 
